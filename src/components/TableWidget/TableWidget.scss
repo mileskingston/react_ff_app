@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+
+table {
+  border-collapse: collapse;
+
+  // @media screen and (max-width: $tablet-p) {
+  //   display: block;
+  //   overflow-x: auto;
+  // }
+}
+
+.table-widget {
+  width: 100%;  
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: white;
+
+  td, th {
+    padding: .75rem;
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: $grey-lightest;
+  }
+
+  tbody tr:nth-child(3),
+  tbody tr:nth-child(7),
+  tbody tr:nth-child(22) {
+    border-top: 1px dotted $grey;
+  }
+
+  tbody tr {
+    transition: 0.15s linear;
+
+    &:hover {
+      background-color: $grey-lighter;
+    }
+  }
+
+  thead th {
+    vertical-align: bottom;
+    text-align: left;
+    color: white;
+    background-color: $grey;
+  }
+}
